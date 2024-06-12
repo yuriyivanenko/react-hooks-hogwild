@@ -11,7 +11,7 @@ const HogTile = ({ hog }) => {
 				<>
 					<p>{hog.specialty}</p>
 					<p>{hog.weight}</p> 
-					<p>{hog.greased}</p> 
+					<p>{hog.greased ? 'Greased' : 'Not Greased'}</p> 
 					<p>{hog["highest medal achieved"]}</p>
 				</>  
 			: null}
