@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
-const HogTile = ({ hogs }) => {
+const HogTile = ({ hog }) => {
+	const [showDetails, setShowDetails] = useState(false)
+	const handleShowDetails = () => setShowDetails(!showDetails)	
+	
 	return (
-		<div className="ui grid container">
-				<div className="ui eight wide column">
-					{hogs.map(hog => {
-						return (
-							<div key={hog.name} className="pigTile">
-								<p className="hoggyText">{hog.name}</p>
-								<img style={{width: '500px'}} src={hog.image}/>
-							</div>
-						)
-					})}
-				</div>
-			</div>
+		<div key={hog.name} className="pigTile" onClick={handleShowDetails}>
+			<p className="hoggyText">{hog.name}</p>
+			{showDetails ? 
+				<>
+					<p>{hog.specialty}</p>
+					<p>{hog.weight}</p> 
+					<p>{hog.greased}</p> 
+					<p>{hog["highest medal achieved"]}</p>
+				</>  
+			: null}
+			<img style={{width: '500px'}} src={hog.image}/>
+		</div>
 	)
 }
 

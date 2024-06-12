@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
-import HogTile from "./HogTile";
+import HogList from "./HogList";
 
 import hogs from "../porkers_data";
 
@@ -8,7 +8,7 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-			<HogTile hogs={hogs} />
+			<HogList hogs={hogs} />
 		</div>
 	);
 }
