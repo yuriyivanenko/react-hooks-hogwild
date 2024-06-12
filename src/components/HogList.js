@@ -29,13 +29,15 @@ const HogList = ({ hogs }) => {
 	return (
 		<>
 			<div>
-				<button 
+				<button className="ui button"
 					style={showGreased ? {backgroundColor: 'lightblue'} : null} 
-					onClick={handleFilterGreased}>Filter Greased Hogs
+					onClick={handleFilterGreased}>
+						Filter Greased Hogs
 				</button>
-				<button 
+				<button className="ui button"
 					style={{marginLeft: '20px', marginBottom: '20px'}} 
-					onClick={handleShowAllHogs}>Show All Hogs
+					onClick={handleShowAllHogs}>
+						Show All Hogs
 				</button>
 			</div>
 			<SortDropdown handleSort={handleSort} />

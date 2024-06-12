@@ -16,7 +16,7 @@ const HogTile = ({ hog, handleHideHog }) => {
 				</>  
 			: null}
 			<img onClick={handleShowDetails} style={{width: '500px'}} src={hog.image}/>
-			<button onClick={() => handleHideHog(hog.name)}>Hide This Hog!</button>
+			<button className="ui button" onClick={() => handleHideHog(hog.name)}>Hide This Hog!</button>
 		</div>
 	)
 }
