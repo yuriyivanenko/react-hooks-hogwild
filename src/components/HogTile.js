@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const HogTile = ({ hog }) => {
+const HogTile = ({ hog, handleHideHog }) => {
 	const [showDetails, setShowDetails] = useState(false)
 	const handleShowDetails = () => setShowDetails(!showDetails)	
 	
 	return (
-		<div key={hog.name} className="pigTile" onClick={handleShowDetails}>
+		<div key={hog.name} className="pigTile" >
 			<p className="hoggyText">{hog.name}</p>
 			{showDetails ? 
 				<>
@@ -15,7 +15,8 @@ const HogTile = ({ hog }) => {
 					<p>{hog["highest medal achieved"]}</p>
 				</>  
 			: null}
-			<img style={{width: '500px'}} src={hog.image}/>
+			<img onClick={handleShowDetails} style={{width: '500px'}} src={hog.image}/>
+			<button onClick={() => handleHideHog(hog.name)}>Hide This Hog!</button>
 		</div>
 	)
 }

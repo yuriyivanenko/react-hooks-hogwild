@@ -112,6 +112,10 @@ ul {
   color: #FBB;
 }
 
+img:hover{
+  cursor: pointer;
+}
+
 .minPigTile {
   width: 250px;
   background-size: cover;
