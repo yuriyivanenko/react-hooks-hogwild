@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const AddHogForm = ({ handleNewHog }) => {
+
 	const [formData, setFormData] = useState({
     name: '',
     specialty: '',
@@ -82,7 +83,8 @@ const AddHogForm = ({ handleNewHog }) => {
         <input
           type="text"
           name="image"
-          value={formData.image}          onChange={handleChange}        />
+          value={formData.image} onChange={handleChange} 
+        />
       </div>
       <button className="ui button" type="submit">Submit</button>
     </form>
