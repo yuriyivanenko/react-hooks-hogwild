@@ -65,6 +65,7 @@ const AddHogForm = ({ handleNewHog }) => {
       <div className="field">
         <label>Medal</label>
         <select
+        className="ui dropdown"
           name="medal"
           value={formData.medal}
           onChange={handleChange}
